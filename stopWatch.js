@@ -1,40 +1,40 @@
-let second = 0,
-	minute = 0,
-	hour = 0,
+let seconds = 0,
+	minutes = 0,
+	hours = 0,
 	secDigit = null,
 	minDigit = null,
 	hourDigit = null;
 let interval = setInterval(timer, 1000);
 
 function timer() {
-	second++;
-	if (second >= 60) {
-		second = 0;
-		minute++;
+	seconds++;
+	if (seconds >= 60) {
+		seconds = 0;
+		minutes++;
 
-		if (minute >= 60) {
-			minute = 0;
-			hour++;
+		if (minutes >= 60) {
+			minutes = 0;
+			hours++;
 		}
 	}
 
-	if (second < 10) {
-		secDigit = `0${second}`;
+	if (seconds < 10) {
+		secDigit = `0${seconds}`;
 	} else {
-		secDigit = second;
+		secDigit = seconds;
 	}
-	if (minute < 10) {
-		minDigit = `0${minute}`;
+	if (minutes < 10) {
+		minDigit = `0${minutes}`;
 	} else {
-		minDigit = minute;
+		minDigit = minutes;
 	}
-	if (hour < 10) {
-		hourDigit = `0${hour}`;
+	if (hours < 10) {
+		hourDigit = `0${hours}`;
 	} else {
-		hourDigit = hour;
+		hourDigit = hours;
 	}
-	if (hour === 6) {
+	if (hours === 6) {
 		clearInterval(interval);
 	}
-	//console.log(`${hourDigit}hr:${minDigit}min:${secDigit}sec`);
+	//console.log(`${hourDigit}Hrs:${minDigit}Mins:${secDigit}Secs`);
 }
